@@ -23,6 +23,8 @@ class firstScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          //To Make The Title on the Center Page
+          centerTitle: true,
           title: const Text('Widget Demo'),
         ),
         body: Column(
@@ -32,12 +34,13 @@ class firstScreen extends StatelessWidget {
               width: double.infinity,
               margin: const EdgeInsets.all(16),
               padding: const EdgeInsets.all(16),
-              color: Colors.blue,
-              child: Text(
+              color: Colors.cyan,
+              child: const Text(
                 'Ini adalah contoh penggunaan Container',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 20.0,
-                  color: Colors.white,
+                  color: Colors.white,      
                 ),
               ),
             ),
