@@ -1,0 +1,58 @@
+void main(){
+  String nama = "Michael Joy";
+  int umur = 18;
+  
+  print("Hallo, nama saya $nama dan umur saya $umur tahun"); //with interpolation
+  print("Hallo, nama saya " + nama + " dan umur saya " + umur.toString() + " tahun"); //without interpolation
+  
+  var alamat = "Lemabang";
+  var alamat2 = "Jl. Rajawali";
+  print(alamat.runtimeType);
+  print(alamat2.runtimeType);
+  
+  //collection
+  var numList = [1, 2, 3, 4];
+  var stringList = ["Hello", "Universitas MDP", "Dart"];
+  
+  print(stringList);
+  
+  var dynamicList = [1, "Universitas MDP", true];
+  print(dynamicList.runtimeType);
+  print(dynamicList[1]);
+  
+  Set<int> mySet = new Set.from([1, 2, 3, 4, 2, 1]);
+  print(mySet);
+  
+  var setA = {1, 2, 3};
+  var setB = {1, 5, 7};
+  
+  setA.add(4);
+  
+  print(setA);
+  
+  setB.remove(7);
+  
+  print(setB);
+  
+  //hasil union
+  var setUnion = setA.union(setB);
+  print(setUnion);
+  
+  //hasil intersection
+  var setIntersection = setA.intersection(setB);
+  print(setIntersection);
+  
+  int angka1 = 10;
+  print("angka 1 $angka1");
+  
+  var primeNum = [2, 3, 5, 7, 11, 13, 17, 19];
+  
+  var searchNum = 13;
+  for(int i = 0; i < primeNum.length; i++){
+    if(searchNum == primeNum[i]){
+      print("$searchNum adalah bilangan prima ke-${i+1}");
+      break;
+    }
+    print("$searchNum != ${primeNum[i]}");
+  }
+}

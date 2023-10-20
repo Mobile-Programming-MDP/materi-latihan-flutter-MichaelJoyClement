@@ -1,0 +1,45 @@
+void main()
+{
+  final myFuture = Future(()
+  {
+    print ('Creating The Future');
+    return 12;
+  }).then((value){
+    print(value);
+  }).catchError((error)
+     {
+       print('Error $error');           
+     });
+  
+  print('main()done');
+
+  
+  getOrder().then((value)
+  {
+    print('You Ordered: $value');
+    
+  }).catchError((error)
+      {
+        print('Error$error');          
+      }).whenComplete(()
+      {
+        print('Thank You');                  
+      });
+  print ('Getting Your Order... ');
+}
+
+Future <String> getOrder()
+{
+  return Future.delayed(Duration(seconds : 2),()
+  {
+    var isStockAvalible = true;
+    if(isStockAvalible)
+    {
+      return 'Coffee Boba';
+    }
+    else
+    {
+      throw ' Out OF Stock';
+    }
+  });
+}

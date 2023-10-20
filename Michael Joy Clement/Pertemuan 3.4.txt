@@ -1,0 +1,53 @@
+class Mahasiswa
+{
+  String _nama;
+  int _umur;
+  
+  Mahasiswa (this._nama, this._umur);
+  
+  
+  // Set Get untuk Nama
+  String get nama => _nama;
+  
+  set nama(String value)
+  {
+    if(value.isNotEmpty)
+    {
+      _nama=value;
+    }
+  }
+  
+  // Set Get untuk umur
+  int get umur => _umur;
+  
+  set umur(int value)
+  {
+    if(value >= 17 && value<=40)
+    {
+      _umur = value;
+    }
+  }
+  
+  
+}
+
+void main()
+{
+  
+  //Memanggil menggunakan Getter
+    //Harus dideklarasikan secara terpisah
+  var mahasiswa = Mahasiswa('Pepe',18);
+  
+    //Dipanggil menggunakan Sintaks dibawah
+  print('Nama Mahasiswa : ${mahasiswa.nama}');
+  print('Umur Mahasiswa : ${mahasiswa.umur} Tahun');
+  
+  //Memanggil menggunakan Setter
+    //dideklarasikan langsung menggunakan sintaks Setter
+  mahasiswa.nama = 'Hadi';
+  mahasiswa.umur = 20;
+  
+    // Menampilkan dengan sintaks berikut ini
+  print('Nama : ${mahasiswa.nama}');
+  print('Umur : ${mahasiswa.umur} Tahun');
+}

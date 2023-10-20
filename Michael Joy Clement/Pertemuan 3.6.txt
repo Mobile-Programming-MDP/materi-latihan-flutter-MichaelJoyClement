@@ -1,0 +1,63 @@
+mixin Flyable
+{
+  void fly(){
+    print('I m flying');
+  }
+}
+mixin Swimmable
+{
+  void Swim()
+  {
+    print('I m Swimming');
+  }
+}
+mixin Walk
+{
+  void walk()
+  {
+    print('I m Walking');
+  }
+}
+
+class Animal
+{
+  String name = '';
+  int age =0;
+  double weight = 0;
+  Animal(this.name, this.age, this.weight);
+  
+  void eat()
+  {
+    print('$name is Eating');
+    weight = weight + 0.2;
+  }
+  void sleep()
+  {
+    print('$name + is Sleeping');
+  }
+  
+}
+
+class Bird extends Animal implements Flyable
+{
+  String featherColor;
+  Bird(String name, int age, double weight, this.featherColor):super(name,age,weight);
+  
+  @override
+  void fly()
+  {
+    print('$name is Flying');
+  }
+}
+
+
+
+void main()
+{
+  var mdpBird = Bird('Gagak',2,0.7,'White');
+  mdpBird.fly();
+  print('Berat Burung ${mdpBird.weight}');
+  mdpBird.eat();
+   print('Berat Burung ${mdpBird.weight}');
+  
+}

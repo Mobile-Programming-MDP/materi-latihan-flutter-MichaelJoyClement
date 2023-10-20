@@ -1,0 +1,35 @@
+void main() async
+{
+  print('Getting your Order');
+  
+  var order = await getOrder();
+  try{
+    print ('Your Order : $order');
+  }catch(error)
+  {
+    print('error $error');
+  }
+  finally
+  {
+  print('Thank You');
+  }
+  
+}
+
+Future <String> getOrder() async
+{
+  return Future.delayed(Duration(seconds :2),()
+  {
+    var isStockAvalible = true;
+    if(isStockAvalible)
+    {
+       return 'Coffee Boba'; 
+    }
+    else
+    {
+      throw 'Out Of Stock';
+    }
+   
+  });
+  
+}
