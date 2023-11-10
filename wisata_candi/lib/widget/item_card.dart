@@ -19,6 +19,7 @@ class ItemCard extends StatelessWidget {
           //ToDo 3: buat image sebagai anak dari column
           Expanded(
             child: ClipRRect(
+              
               borderRadius: BorderRadius.circular(15),
               child: Image.asset(candi.imageAsset,
               width: double.infinity,

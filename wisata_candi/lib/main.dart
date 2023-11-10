@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Wisata Candi',
       theme: ThemeData(
         appBarTheme: const AppBarTheme(
+          
           iconTheme: IconThemeData(color: Colors.lightBlue),
           titleTextStyle: TextStyle(
             color: Colors.lightGreen,

@@ -21,6 +21,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
       // ToDo 2 buat body dengan gridview builder
       body: GridView.builder(
+        
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         padding: EdgeInsets.all(8),
         itemCount: candiList.length,
