@@ -59,6 +59,7 @@ class _MainScreenState extends State<MainScreen> {
     SearchScreen(),
     FavoriteScreen(),
     ProfileScreen(),
+    SignInScreen(),
   ];
   
   @override
@@ -94,6 +95,10 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
               icon:Icon(Icons.person,color:Colors.deepPurple,),
               label: 'Profile'
+          ),
+          BottomNavigationBarItem(
+              icon:Icon(Icons.person,color:Colors.deepPurple,),
+              label: 'Sign In'
           ),
           ],
           selectedItemColor: Colors.deepPurple,
