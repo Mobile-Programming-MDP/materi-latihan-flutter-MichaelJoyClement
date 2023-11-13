@@ -91,6 +91,10 @@ class _MainScreenState extends State<MainScreen> {
               icon:Icon(Icons.favorite,color:Colors.deepPurple,),
               label: 'Favorite'
           ),
+          BottomNavigationBarItem(
+              icon:Icon(Icons.person,color:Colors.deepPurple,),
+              label: 'Profile'
+          ),
           ],
           selectedItemColor: Colors.deepPurple,
           unselectedItemColor: Colors.deepPurple[100],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wisata_candi/screens/sign_in.dart';
 import 'package:wisata_candi/widget/profile_info_item.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -116,7 +117,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     ),
                     isSignIn
                         ? TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,MaterialPageRoute(builder: (context) => SignInScreen()));
+                            },
                             child: Text('Sign Out'),
                             style: TextButton.styleFrom(
                                 backgroundColor: Colors.amber,
