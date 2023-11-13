@@ -65,7 +65,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       //ToDo 2: Buat Properti body berupa widget yang ditampilkan
-      body: _children[_currentIndex],
+        body: _children[_currentIndex],
       //ToDo 3: Buat Properti bottonMavigationBar dengan nilai theme
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
