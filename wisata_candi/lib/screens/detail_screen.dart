@@ -27,6 +27,8 @@ class DetailScreen extends StatelessWidget{
                 ),
                 ),
               ),
+
+              //Tombol Back Custom
               Padding(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
               child: Container(
                 decoration: BoxDecoration(
@@ -34,7 +36,9 @@ class DetailScreen extends StatelessWidget{
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   icon: const Icon(
                     Icons.arrow_back,
                   ),
