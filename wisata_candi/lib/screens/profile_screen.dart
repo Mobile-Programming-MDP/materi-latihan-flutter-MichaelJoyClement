@@ -15,6 +15,12 @@ class _ProfileScreenState extends State<ProfileScreen> {
   String fullName = "";
   String userName= "";
   int favoriteCandiCount = 0;
+  late Color iconColor;
+
+  void signIn()
+  {
+    Navigator.pushNamed(context, '/signIn');
+  }
 
   @override
   Widget build(BuildContext context) {

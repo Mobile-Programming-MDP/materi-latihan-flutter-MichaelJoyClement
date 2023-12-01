@@ -37,8 +37,8 @@ class MyApp extends StatelessWidget {
          ),
         useMaterial3: true,
       ),
-      // home: MainScreen(),
-      home: SignUpScreen(),
+      home: MainScreen(),
+      // home: SignUpScreen(),
       // home: ProfileScreen(),
       // home: DetailScreen(candi: candiList[0]),
       // home: HomeScreen(),
@@ -62,6 +62,7 @@ class _MainScreenState extends State<MainScreen> {
     FavoriteScreen(),
     ProfileScreen(),
     SignInScreen(),
+    SignUpScreen(),
   ];
   
   @override
@@ -101,6 +102,10 @@ class _MainScreenState extends State<MainScreen> {
           BottomNavigationBarItem(
               icon:Icon(Icons.person,color:Colors.deepPurple,),
               label: 'Sign In'
+          ),
+          BottomNavigationBarItem(
+              icon:Icon(Icons.person,color:Colors.deepPurple,),
+              label: 'Sign Up'
           ),
           ],
           selectedItemColor: Colors.deepPurple,
