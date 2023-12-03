@@ -47,6 +47,7 @@ class _SignInScreenState extends State<SignInScreen> {
     try {
       final Future<SharedPreferences> prefsFuture = SharedPreferences.getInstance();
 
+
       final String username = _usernameController.text;
       final String password = _passwordController.text;
       print('Sign in attempt');
@@ -134,7 +135,9 @@ class _SignInScreenState extends State<SignInScreen> {
               //TODO 7 Pasang ElevatedButton Sign In
               SizedBox(height: 20),
               ElevatedButton(
-                onPressed: (){}, 
+                onPressed: (){
+                  Navigator.pushNamed(context, '/home', arguments: _retrieveAndDecryptDataFromPrefs);
+                }, 
                 child: Text('Sign In')),
               //TODO 8 Pasang textButton SignUp
               SizedBox(height: 10),

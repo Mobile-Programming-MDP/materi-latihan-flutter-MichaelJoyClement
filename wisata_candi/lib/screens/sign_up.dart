@@ -37,6 +37,9 @@ class _SignUpScreenState extends State<SignUpScreen> {
     } else {
       setState(() {
         _errorText = "";
+        print('Name : $name' );
+        print('Username : $username');
+        print('Password : $password');
       });
     }
 
@@ -63,12 +66,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
   }
 
   //TODO: 2 membuat fungsi dispose
-  @override
-  void dispose() {
-    _nameController.dispose();
-    _usernameController.dispose();
-    _passwordController.dispose();
-  }
+  // @override
+  // void dispose() {
+  //   _nameController.dispose();
+  //   _usernameController.dispose();
+  //   _passwordController.dispose();
+  // }
 
   @override
   Widget build(BuildContext context) {
